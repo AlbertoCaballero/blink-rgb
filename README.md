@@ -13,3 +13,20 @@ Simple web server implementation for the ESP32 C3 SuperMini board that allows an
 ```
 pio run -t upload
 ```
+
+### Recommended wiring diagram
+```
+ +--------------------------+
+ | External 5V Power Supply |
+ |                          |----(+)----> [5V]   LED Strip   [R G B]
+ |                          |                                 ^ ^ ^
+ |                          |----(-)----> [GND]_______________| | |
+ +--------------------------+     |                           | | |
+                                  |                           | | |
+                                  |        +------------------+ | |
+                                  |        | +------------------+ |
+                                  |        | | +------------------+
+                                  |        | | |
+                                  |      [GND] [8] [9] [10]
+                                  +-----> ESP32-C3 SuperMini
+```
