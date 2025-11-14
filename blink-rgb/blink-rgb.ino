@@ -3,8 +3,8 @@
 #include <math.h>
 
 // Replace with your network credentials
-const char* ssid = "Totalplay-CE9F";
-const char* password = "CE9F11A17A8HZzvs";
+const char* ssid = "";
+const char* password = "";
 
 // GPIO pins for the RGB LED
 const int redPin = 8;
@@ -110,6 +110,7 @@ void handleRoot() {
     html { font-family: Helvetica; text-align: center; background: #f5f7fa; margin: 0; padding: 20px; }
     body { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
     h1 { color: #000000ff; font-size: 24px; margin-bottom: 20px; }
+    .ascii-art { font-family: monospace, courier; font-size: 10px; text-align: center; color: #888; line-height: 1.1; margin-bottom: 20px; font-weight: 900; }
     .color-box { width: 100px; height: 100px; border: 1px solid #ccc; margin: 20px auto; border-radius: 8px; }
     .form-group { margin-bottom: 20px; }
     label { font-size: 18px; color: #1f1f1fff; display: block; margin-bottom: 5px; }
@@ -131,7 +132,15 @@ void handleRoot() {
   </style>
 </head>
 <body>
-  <h1>ESP32 RGB LED Control</h1>
+  <div class="ascii-art"><pre>
+ ____  _     _  _      _  __   ____  _____ ____ 
+/  __\/ \   / \/ \  /|/ |/ /  /  __\/  __//  __\
+| | //| |   | || |\ |||   /   |  \/|| |  _| | //
+| |_\\| |_/\| || | \|||   \   |    /| |_//| |_\\
+\____/\____/\_/\_/  \|\_|\_\  \_/\_\\____\\____/
+                                                
+  </pre></div>
+  <h3>ESP32 RGB LED Control</h3>
   <div class="color-box" style="background-color: rgb(%d, %d, %d);"></div>
   <form action="/set" method="POST">
     <div class="form-group">
